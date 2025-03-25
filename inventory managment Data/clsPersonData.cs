@@ -17,7 +17,7 @@ namespace inventory_managment_Data
             int PersonID = -1;
             SqlConnection connection = new SqlConnection(DataAccessSettings.ConnectionString);
             string quary = @"INSERT INTO [dbo].[people]
-           ([FisrtName]
+           ([FirstName]
            ,[SecondName]
            ,[ThirdName]
            ,[LastName]
@@ -82,6 +82,7 @@ namespace inventory_managment_Data
 
         }
 
+
         public static bool GetByID(int personID, ref string firstName, ref string secondName
             , ref string thirdName, ref string LastName, ref string phone
             , ref string email, ref string imagePath, ref string Address)
@@ -104,7 +105,7 @@ namespace inventory_managment_Data
                 if (reader.Read())
                 {
                     isFound = true;
-                    firstName = (string)reader["FisrtName"];
+                    firstName = (string)reader["FirstName"];
                     secondName = (string)reader["SecondName"];
                     thirdName = (string)reader["ThirdName"];
                     LastName = (string)reader["lastName"];
@@ -134,6 +135,8 @@ namespace inventory_managment_Data
 
             return isFound;
         }
+
+
         public static bool isExistByID(int personID)
         {
             bool isFound = false;
@@ -165,6 +168,8 @@ namespace inventory_managment_Data
             return isFound;
         }
 
+
+
         public static bool UpdatePersonByID(int personID, string firstName, string secondName, string thirdName
             , string lastName, string phone,
             string email, string imageLocation, string address)
@@ -172,7 +177,7 @@ namespace inventory_managment_Data
             int rowsAffected = 0;
             SqlConnection connection = new SqlConnection(DataAccessSettings.ConnectionString);
             string quary = @"UPDATE [dbo].[people]
-                           SET [FisrtName] = @firstName
+                           SET [FirstName] = @firstName
                               ,[SecondName] = @secondName
                               ,[ThirdName] = @thirdName
                               ,[LastName] = @lastName
@@ -217,6 +222,8 @@ namespace inventory_managment_Data
             return rowsAffected>0;
         }
 
+
+
         public static bool DeletePersonByID(int personID)
         {
             int rowsAffected = 0;
@@ -239,5 +246,7 @@ namespace inventory_managment_Data
             return rowsAffected > 0;
 
         }
+
+
     }
 }

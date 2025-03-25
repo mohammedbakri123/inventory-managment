@@ -292,7 +292,17 @@ namespace inventory_managment_Data
 
             try
             {
+                connection.Open();
 
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.HasRows)
+
+                {
+                    result.Load(reader);
+                }
+
+                reader.Close();
             }
             catch
             {

@@ -46,14 +46,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmmain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmmain.Designer.cs">
       <DependentUpon>frmmain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Global\clsGlobal.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmmain.ar-EG.resx">
       <DependentUpon>frmmain.cs</DependentUpon>
     </EmbeddedResource>
@@ -442,6 +452,9 @@
       <Project>{761e90f1-c593-4aea-9cbe-9146544a6f58}</Project>
       <Name>inventory managment business</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inventory-Login.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
