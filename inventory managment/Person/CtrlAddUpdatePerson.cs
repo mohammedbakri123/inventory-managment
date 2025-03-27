@@ -8,21 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace inventory_managment
+namespace inventory_managment.Person
 {
-    public partial class frmMain : Form
+    public partial class CtrlAddUpdatePerson : UserControl
     {
-        public frmMain()
+        public CtrlAddUpdatePerson()
         {
             InitializeComponent();
         }
 
-        private void estdsfsesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void frmMain_Load(object sender, EventArgs e)
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
 
         }

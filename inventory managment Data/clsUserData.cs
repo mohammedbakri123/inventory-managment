@@ -285,7 +285,12 @@ namespace inventory_managment_Data
                                        COALESCE(p.ThirdName, ''), ' ', 
                                        COALESCE(p.LastName, '')) AS 'الاسم',
                                 COALESCE(p.Phone, 'غير متوفر') AS 'رقم الهاتف',
-                                COALESCE(p.Email, 'غير متوفر') AS 'البريد الالكتروني'
+                                CASE 
+                                    WHEN u.role = 1 THEN 'مدير النظام'
+                                    WHEN u.role = 2 THEN 'مسؤول المخزون'
+                                    WHEN u.role = 3 THEN 'أمين الصندوق'
+                                    ELSE 'غير محدد'
+                                END AS 'الدور الوظيفي'
                             FROM Users u
                             JOIN people p ON u.personID = p.personID;";
             SqlCommand command = new SqlCommand( quary, connection);

@@ -56,31 +56,33 @@
             this.lblLogin.ForeColor = System.Drawing.Color.DarkOrchid;
             this.lblLogin.Location = new System.Drawing.Point(491, 43);
             this.lblLogin.Name = "lblLogin";
-            this.lblLogin.Size = new System.Drawing.Size(193, 43);
+            this.lblLogin.Size = new System.Drawing.Size(187, 42);
             this.lblLogin.TabIndex = 1;
             this.lblLogin.Text = "تسجيل الدخول";
             // 
             // tbUserName
             // 
-            this.tbUserName.Location = new System.Drawing.Point(434, 150);
+            this.tbUserName.Location = new System.Drawing.Point(525, 148);
             this.tbUserName.Name = "tbUserName";
             this.tbUserName.Size = new System.Drawing.Size(216, 22);
             this.tbUserName.TabIndex = 2;
+            this.tbUserName.Text = "Moha123";
             // 
             // tbPassword
             // 
             this.tbPassword.AcceptsTab = true;
-            this.tbPassword.Location = new System.Drawing.Point(434, 210);
+            this.tbPassword.Location = new System.Drawing.Point(525, 212);
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.PasswordChar = '*';
             this.tbPassword.Size = new System.Drawing.Size(216, 22);
             this.tbPassword.TabIndex = 3;
+            this.tbPassword.Text = "1234";
             // 
             // lblUserName
             // 
             this.lblUserName.AutoSize = true;
             this.lblUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserName.Location = new System.Drawing.Point(671, 148);
+            this.lblUserName.Location = new System.Drawing.Point(394, 148);
             this.lblUserName.Name = "lblUserName";
             this.lblUserName.Size = new System.Drawing.Size(97, 24);
             this.lblUserName.TabIndex = 4;
@@ -90,7 +92,7 @@
             // 
             this.lblPassword.AutoSize = true;
             this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassword.Location = new System.Drawing.Point(671, 210);
+            this.lblPassword.Location = new System.Drawing.Point(394, 210);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(91, 24);
             this.lblPassword.TabIndex = 5;
@@ -130,7 +132,9 @@
             this.MinimizeBox = false;
             this.Name = "frmLogin";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.RightToLeftLayout = true;
             this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "تسجيل الدخول";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

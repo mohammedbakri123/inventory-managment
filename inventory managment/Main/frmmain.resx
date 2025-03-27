@@ -121,17 +121,17 @@
     <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="ادارةالمستخدمينToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="msiUserManagment.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 10pt, style=Bold</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="ادارةالمستخدمينToolStripMenuItem.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+  <data name="msiUserManagment.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="ادارةالمستخدمينToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="msiUserManagment.Size" type="System.Drawing.Size, System.Drawing">
     <value>211, 68</value>
   </data>
-  <data name="ادارةالمستخدمينToolStripMenuItem.Text" xml:space="preserve">
+  <data name="msiUserManagment.Text" xml:space="preserve">
     <value>ادارة المستخدمين</value>
   </data>
   <data name="ادراةالعملاءToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
@@ -267,13 +267,16 @@
   <data name="$this.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>Yes</value>
   </data>
+  <data name="$this.RightToLeftLayout" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Form1</value>
+    <value>الرئيسية</value>
   </data>
-  <data name="&gt;&gt;ادارةالمستخدمينToolStripMenuItem.Name" xml:space="preserve">
-    <value>ادارةالمستخدمينToolStripMenuItem</value>
+  <data name="&gt;&gt;msiUserManagment.Name" xml:space="preserve">
+    <value>msiUserManagment</value>
   </data>
-  <data name="&gt;&gt;ادارةالمستخدمينToolStripMenuItem.Type" xml:space="preserve">
+  <data name="&gt;&gt;msiUserManagment.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;ادراةالعملاءToolStripMenuItem.Name" xml:space="preserve">
