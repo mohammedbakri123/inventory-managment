@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Global\clsUtil.cs" />
     <Compile Include="Main\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dgvUsers = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblUsers = new System.Windows.Forms.Label();
@@ -39,8 +40,14 @@
             this.tbFilter = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cbFilterByrole = new System.Windows.Forms.ComboBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tmsShowUserInfo = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.tmsAddUser = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvUsers
@@ -49,6 +56,7 @@
             this.dgvUsers.AllowUserToDeleteRows = false;
             this.dgvUsers.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvUsers.ContextMenuStrip = this.contextMenuStrip1;
             this.dgvUsers.Location = new System.Drawing.Point(12, 422);
             this.dgvUsers.Name = "dgvUsers";
             this.dgvUsers.ReadOnly = true;
@@ -173,6 +181,46 @@
             this.cbFilterByrole.TabIndex = 10;
             this.cbFilterByrole.SelectedIndexChanged += new System.EventHandler(this.cbFilterByrole_SelectedIndexChanged);
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tmsShowUserInfo,
+            this.toolStripSeparator1,
+            this.tmsAddUser,
+            this.toolStripMenuItem1});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(260, 124);
+            // 
+            // tmsShowUserInfo
+            // 
+            this.tmsShowUserInfo.Image = global::inventory_managment.Properties.Resources.PersonDetails_32;
+            this.tmsShowUserInfo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tmsShowUserInfo.Name = "tmsShowUserInfo";
+            this.tmsShowUserInfo.Size = new System.Drawing.Size(259, 38);
+            this.tmsShowUserInfo.Text = "عرض معلومات المستخدم";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(256, 6);
+            // 
+            // tmsAddUser
+            // 
+            this.tmsAddUser.Image = global::inventory_managment.Properties.Resources.Add_New_User_32;
+            this.tmsAddUser.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tmsAddUser.Name = "tmsAddUser";
+            this.tmsAddUser.Size = new System.Drawing.Size(259, 38);
+            this.tmsAddUser.Text = "إضافة مستخدم";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Image = global::inventory_managment.Properties.Resources.edit_32;
+            this.toolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(259, 38);
+            this.toolStripMenuItem1.Text = "تعديل معلومات المستخدم";
+            // 
             // frmListUsers
             // 
             this.AcceptButton = this.btnAddUser;
@@ -204,6 +252,7 @@
             this.Load += new System.EventHandler(this.frmListUsers_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -222,5 +271,10 @@
         private System.Windows.Forms.TextBox tbFilter;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cbFilterByrole;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem tmsShowUserInfo;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem tmsAddUser;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
     }
 }

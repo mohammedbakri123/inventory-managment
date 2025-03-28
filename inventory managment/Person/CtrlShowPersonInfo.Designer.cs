@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblAddressValue = new System.Windows.Forms.Label();
+            this.lblAddress = new System.Windows.Forms.Label();
             this.lblEmailValue = new System.Windows.Forms.Label();
             this.lblPhoneValue = new System.Windows.Forms.Label();
             this.lblNameValue = new System.Windows.Forms.Label();
@@ -43,6 +45,8 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.groupBox1.Controls.Add(this.lblAddressValue);
+            this.groupBox1.Controls.Add(this.lblAddress);
             this.groupBox1.Controls.Add(this.lblEmailValue);
             this.groupBox1.Controls.Add(this.lblPhoneValue);
             this.groupBox1.Controls.Add(this.lblNameValue);
@@ -55,16 +59,36 @@
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox1.Size = new System.Drawing.Size(716, 241);
+            this.groupBox1.Size = new System.Drawing.Size(716, 283);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "معلومات الشخص";
+            this.groupBox1.Text = "المعلومات الشخصية";
+            // 
+            // lblAddressValue
+            // 
+            this.lblAddressValue.AutoSize = true;
+            this.lblAddressValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddressValue.Location = new System.Drawing.Point(511, 199);
+            this.lblAddressValue.Name = "lblAddressValue";
+            this.lblAddressValue.Size = new System.Drawing.Size(60, 25);
+            this.lblAddressValue.TabIndex = 8;
+            this.lblAddressValue.Text = "????";
+            // 
+            // lblAddress
+            // 
+            this.lblAddress.AutoSize = true;
+            this.lblAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddress.Location = new System.Drawing.Point(625, 199);
+            this.lblAddress.Name = "lblAddress";
+            this.lblAddress.Size = new System.Drawing.Size(76, 25);
+            this.lblAddress.TabIndex = 7;
+            this.lblAddress.Text = "العنوان :";
             // 
             // lblEmailValue
             // 
             this.lblEmailValue.AutoSize = true;
             this.lblEmailValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmailValue.Location = new System.Drawing.Point(541, 173);
+            this.lblEmailValue.Location = new System.Drawing.Point(511, 156);
             this.lblEmailValue.Name = "lblEmailValue";
             this.lblEmailValue.Size = new System.Drawing.Size(60, 25);
             this.lblEmailValue.TabIndex = 6;
@@ -74,7 +98,7 @@
             // 
             this.lblPhoneValue.AutoSize = true;
             this.lblPhoneValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPhoneValue.Location = new System.Drawing.Point(511, 123);
+            this.lblPhoneValue.Location = new System.Drawing.Point(511, 106);
             this.lblPhoneValue.Name = "lblPhoneValue";
             this.lblPhoneValue.Size = new System.Drawing.Size(60, 25);
             this.lblPhoneValue.TabIndex = 5;
@@ -84,7 +108,7 @@
             // 
             this.lblNameValue.AutoSize = true;
             this.lblNameValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNameValue.Location = new System.Drawing.Point(541, 64);
+            this.lblNameValue.Location = new System.Drawing.Point(511, 64);
             this.lblNameValue.Name = "lblNameValue";
             this.lblNameValue.Size = new System.Drawing.Size(60, 25);
             this.lblNameValue.TabIndex = 4;
@@ -95,7 +119,7 @@
             this.pbPersonPic.Image = global::inventory_managment.Properties.Resources.Male_512;
             this.pbPersonPic.Location = new System.Drawing.Point(27, 44);
             this.pbPersonPic.Name = "pbPersonPic";
-            this.pbPersonPic.Size = new System.Drawing.Size(165, 166);
+            this.pbPersonPic.Size = new System.Drawing.Size(192, 197);
             this.pbPersonPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbPersonPic.TabIndex = 3;
             this.pbPersonPic.TabStop = false;
@@ -104,7 +128,7 @@
             // 
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(627, 173);
+            this.lblEmail.Location = new System.Drawing.Point(627, 156);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(74, 25);
             this.lblEmail.TabIndex = 2;
@@ -114,7 +138,7 @@
             // 
             this.lblPhone.AutoSize = true;
             this.lblPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPhone.Location = new System.Drawing.Point(597, 123);
+            this.lblPhone.Location = new System.Drawing.Point(597, 106);
             this.lblPhone.Name = "lblPhone";
             this.lblPhone.Size = new System.Drawing.Size(104, 25);
             this.lblPhone.TabIndex = 1;
@@ -136,7 +160,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupBox1);
             this.Name = "CtrlShowPersonInfo";
-            this.Size = new System.Drawing.Size(716, 241);
+            this.Size = new System.Drawing.Size(716, 283);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPersonPic)).EndInit();
@@ -154,5 +178,7 @@
         private System.Windows.Forms.Label lblEmailValue;
         private System.Windows.Forms.Label lblPhoneValue;
         private System.Windows.Forms.Label lblNameValue;
+        private System.Windows.Forms.Label lblAddressValue;
+        private System.Windows.Forms.Label lblAddress;
     }
 }

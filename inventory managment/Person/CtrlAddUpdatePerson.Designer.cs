@@ -28,50 +28,173 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lblName = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.llremoveImage = new System.Windows.Forms.LinkLabel();
+            this.llChangeImage = new System.Windows.Forms.LinkLabel();
+            this.pbPersonPic = new System.Windows.Forms.PictureBox();
+            this.rtbAddress = new System.Windows.Forms.RichTextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.tbEmail = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tbPhone = new System.Windows.Forms.TextBox();
+            this.lblPhone = new System.Windows.Forms.Label();
+            this.tbLastName = new System.Windows.Forms.TextBox();
+            this.tbThirdName = new System.Windows.Forms.TextBox();
+            this.tbSecondName = new System.Windows.Forms.TextBox();
+            this.tbFirstName = new System.Windows.Forms.TextBox();
+            this.lblName = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPersonPic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox1.Controls.Add(this.linkLabel2);
-            this.groupBox1.Controls.Add(this.linkLabel1);
-            this.groupBox1.Controls.Add(this.pictureBox1);
-            this.groupBox1.Controls.Add(this.richTextBox1);
+            this.groupBox1.Controls.Add(this.llremoveImage);
+            this.groupBox1.Controls.Add(this.llChangeImage);
+            this.groupBox1.Controls.Add(this.pbPersonPic);
+            this.groupBox1.Controls.Add(this.rtbAddress);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.textBox6);
+            this.groupBox1.Controls.Add(this.tbEmail);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.textBox5);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.tbPhone);
+            this.groupBox1.Controls.Add(this.lblPhone);
+            this.groupBox1.Controls.Add(this.tbLastName);
+            this.groupBox1.Controls.Add(this.tbThirdName);
+            this.groupBox1.Controls.Add(this.tbSecondName);
+            this.groupBox1.Controls.Add(this.tbFirstName);
             this.groupBox1.Controls.Add(this.lblName);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox1.Size = new System.Drawing.Size(722, 344);
+            this.groupBox1.Size = new System.Drawing.Size(722, 353);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "المعلومات الشخصية";
+            // 
+            // llremoveImage
+            // 
+            this.llremoveImage.AutoSize = true;
+            this.llremoveImage.Location = new System.Drawing.Point(62, 314);
+            this.llremoveImage.Name = "llremoveImage";
+            this.llremoveImage.Size = new System.Drawing.Size(85, 18);
+            this.llremoveImage.TabIndex = 13;
+            this.llremoveImage.TabStop = true;
+            this.llremoveImage.Text = "حذف الصورة";
+            this.llremoveImage.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llremoveImage_LinkClicked);
+            // 
+            // llChangeImage
+            // 
+            this.llChangeImage.AutoSize = true;
+            this.llChangeImage.Location = new System.Drawing.Point(62, 286);
+            this.llChangeImage.Name = "llChangeImage";
+            this.llChangeImage.Size = new System.Drawing.Size(87, 18);
+            this.llChangeImage.TabIndex = 12;
+            this.llChangeImage.TabStop = true;
+            this.llChangeImage.Text = "تغيير الصورة";
+            this.llChangeImage.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llChangeImage_LinkClicked);
+            // 
+            // pbPersonPic
+            // 
+            this.pbPersonPic.Image = global::inventory_managment.Properties.Resources.Male_512;
+            this.pbPersonPic.Location = new System.Drawing.Point(27, 101);
+            this.pbPersonPic.Name = "pbPersonPic";
+            this.pbPersonPic.Size = new System.Drawing.Size(161, 170);
+            this.pbPersonPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbPersonPic.TabIndex = 11;
+            this.pbPersonPic.TabStop = false;
+            // 
+            // rtbAddress
+            // 
+            this.rtbAddress.Location = new System.Drawing.Point(233, 209);
+            this.rtbAddress.Name = "rtbAddress";
+            this.rtbAddress.Size = new System.Drawing.Size(358, 83);
+            this.rtbAddress.TabIndex = 10;
+            this.rtbAddress.Text = "";
+            this.rtbAddress.Validating += new System.ComponentModel.CancelEventHandler(this.ValidateEmptyTextBox);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(645, 200);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(71, 24);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "العنوان :";
+            // 
+            // tbEmail
+            // 
+            this.tbEmail.Location = new System.Drawing.Point(466, 163);
+            this.tbEmail.Name = "tbEmail";
+            this.tbEmail.Size = new System.Drawing.Size(125, 24);
+            this.tbEmail.TabIndex = 8;
+            this.tbEmail.Validating += new System.ComponentModel.CancelEventHandler(this.tbEmail_Validating);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(638, 163);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(69, 24);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "الإيميل :";
+            // 
+            // tbPhone
+            // 
+            this.tbPhone.Location = new System.Drawing.Point(466, 110);
+            this.tbPhone.Name = "tbPhone";
+            this.tbPhone.Size = new System.Drawing.Size(125, 24);
+            this.tbPhone.TabIndex = 6;
+            this.tbPhone.Validating += new System.ComponentModel.CancelEventHandler(this.ValidateEmptyTextBox);
+            // 
+            // lblPhone
+            // 
+            this.lblPhone.AutoSize = true;
+            this.lblPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPhone.Location = new System.Drawing.Point(620, 110);
+            this.lblPhone.Name = "lblPhone";
+            this.lblPhone.Size = new System.Drawing.Size(96, 24);
+            this.lblPhone.TabIndex = 5;
+            this.lblPhone.Text = "رقم الهاتف :";
+            // 
+            // tbLastName
+            // 
+            this.tbLastName.Location = new System.Drawing.Point(27, 56);
+            this.tbLastName.Name = "tbLastName";
+            this.tbLastName.Size = new System.Drawing.Size(125, 24);
+            this.tbLastName.TabIndex = 4;
+            this.tbLastName.Validating += new System.ComponentModel.CancelEventHandler(this.ValidateEmptyTextBox);
+            // 
+            // tbThirdName
+            // 
+            this.tbThirdName.Location = new System.Drawing.Point(171, 56);
+            this.tbThirdName.Name = "tbThirdName";
+            this.tbThirdName.Size = new System.Drawing.Size(125, 24);
+            this.tbThirdName.TabIndex = 3;
+            this.tbThirdName.Validating += new System.ComponentModel.CancelEventHandler(this.ValidateEmptyTextBox);
+            // 
+            // tbSecondName
+            // 
+            this.tbSecondName.Location = new System.Drawing.Point(320, 56);
+            this.tbSecondName.Name = "tbSecondName";
+            this.tbSecondName.Size = new System.Drawing.Size(125, 24);
+            this.tbSecondName.TabIndex = 2;
+            this.tbSecondName.Validating += new System.ComponentModel.CancelEventHandler(this.ValidateEmptyTextBox);
+            // 
+            // tbFirstName
+            // 
+            this.tbFirstName.Location = new System.Drawing.Point(466, 56);
+            this.tbFirstName.Name = "tbFirstName";
+            this.tbFirstName.Size = new System.Drawing.Size(125, 24);
+            this.tbFirstName.TabIndex = 1;
+            this.tbFirstName.Validating += new System.ComponentModel.CancelEventHandler(this.ValidateEmptyTextBox);
             // 
             // lblName
             // 
@@ -83,116 +206,13 @@
             this.lblName.TabIndex = 0;
             this.lblName.Text = "الاسم :";
             // 
-            // textBox1
+            // errorProvider1
             // 
-            this.textBox1.Location = new System.Drawing.Point(506, 56);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(125, 24);
-            this.textBox1.TabIndex = 1;
+            this.errorProvider1.ContainerControl = this;
             // 
-            // textBox2
+            // openFileDialog1
             // 
-            this.textBox2.Location = new System.Drawing.Point(355, 56);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(125, 24);
-            this.textBox2.TabIndex = 2;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(204, 56);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(125, 24);
-            this.textBox3.TabIndex = 3;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(52, 56);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(125, 24);
-            this.textBox4.TabIndex = 4;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(651, 110);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 24);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "الاسم :";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(506, 110);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(125, 24);
-            this.textBox5.TabIndex = 6;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(651, 163);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 24);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "الاسم :";
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(506, 163);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(125, 24);
-            this.textBox6.TabIndex = 8;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(651, 200);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 24);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "الاسم :";
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(273, 209);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(358, 83);
-            this.richTextBox1.TabIndex = 10;
-            this.richTextBox1.Text = "";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::inventory_managment.Properties.Resources.Male_512;
-            this.pictureBox1.Location = new System.Drawing.Point(43, 96);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(161, 170);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(85, 274);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(83, 18);
-            this.linkLabel1.TabIndex = 12;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "linkLabel1";
-            // 
-            // linkLabel2
-            // 
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(85, 304);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(83, 18);
-            this.linkLabel2.TabIndex = 13;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "linkLabel2";
-            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // CtrlAddUpdatePerson
             // 
@@ -200,10 +220,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupBox1);
             this.Name = "CtrlAddUpdatePerson";
-            this.Size = new System.Drawing.Size(728, 347);
+            this.Size = new System.Drawing.Size(728, 358);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPersonPic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -211,19 +232,21 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.LinkLabel linkLabel2;
-        private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.LinkLabel llremoveImage;
+        private System.Windows.Forms.LinkLabel llChangeImage;
+        private System.Windows.Forms.PictureBox pbPersonPic;
+        private System.Windows.Forms.RichTextBox rtbAddress;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox tbEmail;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbPhone;
+        private System.Windows.Forms.Label lblPhone;
+        private System.Windows.Forms.TextBox tbLastName;
+        private System.Windows.Forms.TextBox tbThirdName;
+        private System.Windows.Forms.TextBox tbSecondName;
+        private System.Windows.Forms.TextBox tbFirstName;
         private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

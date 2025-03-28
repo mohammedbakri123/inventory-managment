@@ -19,7 +19,7 @@ namespace inventory_managment.Person
         public clsPerson SelectedPerson { get { return _person; } }
 
         private int _PersonID = -1;
-        public int PersonID { get { return _PersonID; } }
+        public int PersonID { get { return _PersonID; } set { }  }
         public CtrlShowPersonInfo()
         {
             InitializeComponent();
@@ -41,6 +41,7 @@ namespace inventory_managment.Person
             lblEmailValue.Text = "????";
             lblNameValue.Text = "????";
             lblPhoneValue.Text = "????";
+            lblAddressValue.Text = "????";
             pbPersonPic.Image = Resources.Male_512;
 
         }
@@ -56,12 +57,12 @@ namespace inventory_managment.Person
 
         }
 
-        public void _FillPersonInfo()
+        private void _FillPersonInfo()
         {
             lblEmailValue.Text = _person.Email;
             lblNameValue.Text = _person.FullName;
             lblPhoneValue.Text = _person.Phone;
-            
+            lblAddressValue.Text = _person.Address;
         }
 
     }
