@@ -30,24 +30,25 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dgvUsers = new System.Windows.Forms.DataGridView();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tmsShowUserInfo = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.tmsAddUser = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.tmsStopUser = new System.Windows.Forms.ToolStripMenuItem();
             this.lblUsers = new System.Windows.Forms.Label();
-            this.btnAddUser = new System.Windows.Forms.Button();
-            this.btnClose = new System.Windows.Forms.Button();
             this.lblRecord = new System.Windows.Forms.Label();
             this.lblRecordCount = new System.Windows.Forms.Label();
             this.cbFilterBy = new System.Windows.Forms.ComboBox();
             this.tbFilter = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cbFilterByrole = new System.Windows.Forms.ComboBox();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.tmsShowUserInfo = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.tmsAddUser = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnAddUser = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvUsers
@@ -65,15 +66,60 @@
             this.dgvUsers.Size = new System.Drawing.Size(1086, 396);
             this.dgvUsers.TabIndex = 0;
             // 
-            // pictureBox1
+            // contextMenuStrip1
             // 
-            this.pictureBox1.Image = global::inventory_managment.Properties.Resources.Users_2_400;
-            this.pictureBox1.Location = new System.Drawing.Point(421, 22);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(262, 229);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tmsShowUserInfo,
+            this.toolStripSeparator1,
+            this.tmsAddUser,
+            this.toolStripMenuItem1,
+            this.tmsStopUser});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.contextMenuStrip1.Size = new System.Drawing.Size(260, 162);
+            // 
+            // tmsShowUserInfo
+            // 
+            this.tmsShowUserInfo.Image = global::inventory_managment.Properties.Resources.PersonDetails_32;
+            this.tmsShowUserInfo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tmsShowUserInfo.Name = "tmsShowUserInfo";
+            this.tmsShowUserInfo.Size = new System.Drawing.Size(259, 38);
+            this.tmsShowUserInfo.Text = "عرض معلومات المستخدم";
+            this.tmsShowUserInfo.Click += new System.EventHandler(this.tmsShowUserInfo_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(256, 6);
+            // 
+            // tmsAddUser
+            // 
+            this.tmsAddUser.Image = global::inventory_managment.Properties.Resources.Add_New_User_32;
+            this.tmsAddUser.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tmsAddUser.Name = "tmsAddUser";
+            this.tmsAddUser.Size = new System.Drawing.Size(259, 38);
+            this.tmsAddUser.Text = "إضافة مستخدم";
+            this.tmsAddUser.Click += new System.EventHandler(this.tmsAddUser_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Image = global::inventory_managment.Properties.Resources.edit_32;
+            this.toolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(259, 38);
+            this.toolStripMenuItem1.Text = "تعديل معلومات المستخدم";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            // 
+            // tmsStopUser
+            // 
+            this.tmsStopUser.Image = global::inventory_managment.Properties.Resources.Delete_32;
+            this.tmsStopUser.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.tmsStopUser.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tmsStopUser.Name = "tmsStopUser";
+            this.tmsStopUser.Size = new System.Drawing.Size(259, 38);
+            this.tmsStopUser.Text = "ايقاف";
+            this.tmsStopUser.Click += new System.EventHandler(this.tmsStopUser_Click);
             // 
             // lblUsers
             // 
@@ -85,31 +131,6 @@
             this.lblUsers.Size = new System.Drawing.Size(176, 36);
             this.lblUsers.TabIndex = 2;
             this.lblUsers.Text = "ادارة المستخدمين";
-            // 
-            // btnAddUser
-            // 
-            this.btnAddUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddUser.Image = global::inventory_managment.Properties.Resources.Add_New_User_72;
-            this.btnAddUser.Location = new System.Drawing.Point(1008, 336);
-            this.btnAddUser.Name = "btnAddUser";
-            this.btnAddUser.Size = new System.Drawing.Size(90, 80);
-            this.btnAddUser.TabIndex = 3;
-            this.btnAddUser.UseVisualStyleBackColor = true;
-            // 
-            // btnClose
-            // 
-            this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.Image = global::inventory_managment.Properties.Resources.Close_32;
-            this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose.Location = new System.Drawing.Point(997, 824);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(101, 36);
-            this.btnClose.TabIndex = 4;
-            this.btnClose.Text = "    إغلاق";
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // lblRecord
             // 
@@ -155,6 +176,7 @@
             this.tbFilter.Size = new System.Drawing.Size(193, 22);
             this.tbFilter.TabIndex = 8;
             this.tbFilter.TextChanged += new System.EventHandler(this.tbFilter_TextChanged);
+            this.tbFilter.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbFilter_KeyPress);
             // 
             // label1
             // 
@@ -181,45 +203,41 @@
             this.cbFilterByrole.TabIndex = 10;
             this.cbFilterByrole.SelectedIndexChanged += new System.EventHandler(this.cbFilterByrole_SelectedIndexChanged);
             // 
-            // contextMenuStrip1
+            // btnAddUser
             // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tmsShowUserInfo,
-            this.toolStripSeparator1,
-            this.tmsAddUser,
-            this.toolStripMenuItem1});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(260, 124);
+            this.btnAddUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddUser.Image = global::inventory_managment.Properties.Resources.Add_New_User_72;
+            this.btnAddUser.Location = new System.Drawing.Point(1013, 341);
+            this.btnAddUser.Name = "btnAddUser";
+            this.btnAddUser.Size = new System.Drawing.Size(85, 75);
+            this.btnAddUser.TabIndex = 3;
+            this.btnAddUser.UseVisualStyleBackColor = true;
+            this.btnAddUser.Click += new System.EventHandler(this.btnAddUser_Click);
             // 
-            // tmsShowUserInfo
+            // btnClose
             // 
-            this.tmsShowUserInfo.Image = global::inventory_managment.Properties.Resources.PersonDetails_32;
-            this.tmsShowUserInfo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.tmsShowUserInfo.Name = "tmsShowUserInfo";
-            this.tmsShowUserInfo.Size = new System.Drawing.Size(259, 38);
-            this.tmsShowUserInfo.Text = "عرض معلومات المستخدم";
+            this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.Image = global::inventory_managment.Properties.Resources.Close_32;
+            this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClose.Location = new System.Drawing.Point(997, 824);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(101, 36);
+            this.btnClose.TabIndex = 4;
+            this.btnClose.Text = "    إغلاق";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // toolStripSeparator1
+            // pictureBox1
             // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(256, 6);
-            // 
-            // tmsAddUser
-            // 
-            this.tmsAddUser.Image = global::inventory_managment.Properties.Resources.Add_New_User_32;
-            this.tmsAddUser.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.tmsAddUser.Name = "tmsAddUser";
-            this.tmsAddUser.Size = new System.Drawing.Size(259, 38);
-            this.tmsAddUser.Text = "إضافة مستخدم";
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Image = global::inventory_managment.Properties.Resources.edit_32;
-            this.toolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(259, 38);
-            this.toolStripMenuItem1.Text = "تعديل معلومات المستخدم";
+            this.pictureBox1.Image = global::inventory_managment.Properties.Resources.Users_2_400;
+            this.pictureBox1.Location = new System.Drawing.Point(421, 22);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(262, 229);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // frmListUsers
             // 
@@ -251,8 +269,8 @@
             this.Text = "المستخدمون";
             this.Load += new System.EventHandler(this.frmListUsers_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -276,5 +294,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem tmsAddUser;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem tmsStopUser;
     }
 }

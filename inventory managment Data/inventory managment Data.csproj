@@ -49,6 +49,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clsClientData.cs" />
+    <Compile Include="clsBillData.cs" />
+    <Compile Include="clsPaymentData.cs" />
+    <Compile Include="clsSoldData.cs" />
+    <Compile Include="clsSellPointData.cs" />
+    <Compile Include="clsDamagedData.cs" />
+    <Compile Include="clsCatagoryData.cs" />
+    <Compile Include="clsProductData.cs" />
+    <Compile Include="clsStockData.cs" />
     <Compile Include="clsUserData.cs" />
     <Compile Include="clsPersonData.cs" />
     <Compile Include="DataAccessSettings.cs" />

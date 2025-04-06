@@ -73,7 +73,7 @@ namespace inventory_managment.Person
             
             if(personID == -1) {
                 _ResetDefaultValue();
-                return;
+                
             }
             _LoadData();
             
@@ -94,9 +94,9 @@ namespace inventory_managment.Person
                     
                     }
                 }
-                if(pbPersonPic.ImageLocation != "")
+                if(pbPersonPic.ImageLocation != null) 
                 {
-                    string sourceFile = _person.ImagePath;
+                    string sourceFile = pbPersonPic.ImageLocation;
                     if(clsUtil.CopyImageToProjectImagesFolder(ref sourceFile , 1))
                     {
                         pbPersonPic.ImageLocation = sourceFile;
@@ -115,6 +115,15 @@ namespace inventory_managment.Person
 
         public bool save()
         {
+            if(!this.ValidateChildren()) 
+                return false;
+
+            if(!_HandlImage())
+            {
+                return false;
+                
+            }
+            _PersonID = _person.PersonID;
             _person.FirstName = tbFirstName.Text;
             _person.LastName = tbLastName.Text;
             _person.SecondName = tbSecondName.Text;
@@ -172,6 +181,24 @@ namespace inventory_managment.Person
             {
                 e.Cancel = true;
                 errorProvider1.SetError(Temp,"يجب ملأ هذا الحقل");
+            }
+            else
+            {
+                //e.Cancel = false;
+                errorProvider1.SetError(Temp, null);
+            }
+
+        }
+
+        private void ValidateEmptyRichTextBox(object sender, CancelEventArgs e)
+        {
+
+            // First: set AutoValidate property of your Form to EnableAllowFocusChange in designer 
+            RichTextBox Temp = ((RichTextBox)sender);
+            if (string.IsNullOrEmpty(Temp.Text.Trim()))
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(Temp, "يجب ملأ هذا الحقل");
             }
             else
             {

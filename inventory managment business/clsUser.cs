@@ -6,6 +6,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace inventory_managment_business
 {
@@ -121,6 +122,11 @@ namespace inventory_managment_business
         public static DataTable AllUsers()
         {
             return clsUserData.GetAllUsers();
+        }
+
+        public static bool SetStop(int UserID)
+        {
+            return clsUserData.SetUserStop(UserID);
         }
     }
 }

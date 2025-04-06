@@ -22,7 +22,7 @@ namespace inventory_managment
         private void btnLogin_Click(object sender, EventArgs e)
         {
             if(clsUser.IsUserExist(tbUserName.Text , tbPassword.Text)) {
-                clsGlobal.crruntUser = clsUser.Find(tbUserName.Text, tbUserName.Text);
+                clsGlobal.crruntUser = clsUser.Find(tbUserName.Text, tbPassword.Text);
                 this.Hide();
                 frmMain frmMain = new frmMain();
                 frmMain.ShowDialog();

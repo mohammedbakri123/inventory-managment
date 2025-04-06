@@ -52,22 +52,23 @@ namespace inventory_managment.User.Controls
             string role = "";
             switch(_User.role)
             {
-                case 0:
+                case 1:
                     role = "مدير النظام";
                     break;
-                case 1:
+                case 2:
                     role = "مسؤول المخزون";
                     break;
-                case 2:
+                case 3:
                     role = "أمين الصندوق";
                     break;
-                case 3:
+                case 4:
                     role = "موقف";
                     break;
             }
            lblRoleValue.Text = role;
             lblUserIDValue.Text = _User.UserID.ToString();
             lblUserNameValue.Text = _User.UserName;
+            
         }
 
         

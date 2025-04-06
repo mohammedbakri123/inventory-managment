@@ -68,7 +68,7 @@
             // 
             this.lblAddressValue.AutoSize = true;
             this.lblAddressValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddressValue.Location = new System.Drawing.Point(511, 199);
+            this.lblAddressValue.Location = new System.Drawing.Point(366, 199);
             this.lblAddressValue.Name = "lblAddressValue";
             this.lblAddressValue.Size = new System.Drawing.Size(60, 25);
             this.lblAddressValue.TabIndex = 8;
@@ -88,7 +88,7 @@
             // 
             this.lblEmailValue.AutoSize = true;
             this.lblEmailValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmailValue.Location = new System.Drawing.Point(511, 156);
+            this.lblEmailValue.Location = new System.Drawing.Point(366, 156);
             this.lblEmailValue.Name = "lblEmailValue";
             this.lblEmailValue.Size = new System.Drawing.Size(60, 25);
             this.lblEmailValue.TabIndex = 6;
@@ -98,7 +98,7 @@
             // 
             this.lblPhoneValue.AutoSize = true;
             this.lblPhoneValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPhoneValue.Location = new System.Drawing.Point(511, 106);
+            this.lblPhoneValue.Location = new System.Drawing.Point(366, 106);
             this.lblPhoneValue.Name = "lblPhoneValue";
             this.lblPhoneValue.Size = new System.Drawing.Size(60, 25);
             this.lblPhoneValue.TabIndex = 5;
@@ -108,7 +108,7 @@
             // 
             this.lblNameValue.AutoSize = true;
             this.lblNameValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNameValue.Location = new System.Drawing.Point(511, 64);
+            this.lblNameValue.Location = new System.Drawing.Point(366, 64);
             this.lblNameValue.Name = "lblNameValue";
             this.lblNameValue.Size = new System.Drawing.Size(60, 25);
             this.lblNameValue.TabIndex = 4;

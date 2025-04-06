@@ -23,9 +23,9 @@ namespace inventory_managment_Data
                                ,[personID])
                          VALUES
                                (@UserName
-                               ,@Passwoed
+                               ,@Password
                                ,@role
-                               ,@PersonID;SELECT SCOPE_IDENTITY();";
+                               ,@PersonID);SELECT SCOPE_IDENTITY();";
             SqlCommand command = new SqlCommand(quary, connection);
 
             command.Parameters.AddWithValue("@UserName", UserName);
@@ -96,7 +96,7 @@ namespace inventory_managment_Data
             return isFound;
         }
        
-        public static bool GetByUserNameAndPassword(ref int UserID,  string UserName,  string password, ref int role, ref int personID)
+        public static bool GetByUserNameAndPassword1(ref int UserID,  string UserName,  string password, ref int role, ref int personID)
         {
             bool isFound = false;
             SqlConnection connection = new SqlConnection(DataAccessSettings.ConnectionString);
@@ -134,7 +134,44 @@ namespace inventory_managment_Data
             }
             return isFound;
         }
-    
+
+        public static bool GetByUserNameAndPassword(ref int UserID, string UserName, string password, ref int role, ref int personID)
+        {
+            bool isFound = false;
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(DataAccessSettings.ConnectionString))
+                {
+                    string quary = @"select * from Users where UserName = @UserName and Password = @Password;";
+                    using(SqlCommand command = new SqlCommand(quary, connection))
+                    {
+                        connection.Open();
+                        command.Parameters.AddWithValue("@UserName", UserName);
+                        command.Parameters.AddWithValue("@Password", password);
+                        using(SqlDataReader reader = command.ExecuteReader())
+                        {
+                            
+                            if (reader.Read())
+                            {
+                                isFound = true;
+                                UserID = (int)reader["UserID"];
+                                role = (int)reader["role"];
+                                personID = (int)reader["personID"];
+                            }
+                        }
+
+                    }
+                }
+            }
+            catch
+            {
+                isFound = false;
+            }
+            return isFound;
+        }
+
+
+
         public static bool isUserExistByID(int UserID)
         {
             bool isFound = false;
@@ -319,6 +356,34 @@ namespace inventory_managment_Data
             }
 
             return result;
+        }
+
+        public static bool SetUserStop(int UserID)
+        {
+            int rowsAffected = 0;
+
+            SqlConnection connection = new SqlConnection(DataAccessSettings.ConnectionString);
+
+            string quary = @"UPDATE [dbo].[Users] SET [role] = 4 WHERE UserID = @UserID";
+
+            SqlCommand command = new SqlCommand(quary,connection);
+
+            command.Parameters.AddWithValue("@UserID", UserID);
+
+            try
+            {
+                connection.Open();
+                rowsAffected = command.ExecuteNonQuery();
+            }
+            catch
+            {
+                rowsAffected = 0;
+            }
+            finally
+            {
+                connection.Close();
+            }
+            return rowsAffected > 0;
         }
     }
 }

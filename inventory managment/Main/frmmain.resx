@@ -146,28 +146,52 @@
   <data name="ادراةالعملاءToolStripMenuItem.Text" xml:space="preserve">
     <value>ادراة العملاء</value>
   </data>
-  <data name="ادارةالمنتجاتToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="msiProducts.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 10pt, style=Bold</value>
   </data>
-  <data name="ادارةالمنتجاتToolStripMenuItem.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+  <data name="msiProducts.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="ادارةالمنتجاتToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="msiProducts.Size" type="System.Drawing.Size, System.Drawing">
     <value>155, 68</value>
   </data>
-  <data name="ادارةالمنتجاتToolStripMenuItem.Text" xml:space="preserve">
+  <data name="msiProducts.Text" xml:space="preserve">
     <value>ادارة المنتجات</value>
   </data>
-  <data name="المخزنToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="msiStocksManagment.Size" type="System.Drawing.Size, System.Drawing">
+    <value>224, 28</value>
+  </data>
+  <data name="msiStocksManagment.Text" xml:space="preserve">
+    <value>ادارة الكميات</value>
+  </data>
+  <data name="msiDamagedManagment.Size" type="System.Drawing.Size, System.Drawing">
+    <value>224, 28</value>
+  </data>
+  <data name="msiDamagedManagment.Text" xml:space="preserve">
+    <value>عرض التوالف</value>
+  </data>
+  <data name="msiBillsManagments.Size" type="System.Drawing.Size, System.Drawing">
+    <value>224, 28</value>
+  </data>
+  <data name="msiBillsManagments.Text" xml:space="preserve">
+    <value>عرض الفواتير</value>
+  </data>
+  <data name="msiSellPointsManagment.Size" type="System.Drawing.Size, System.Drawing">
+    <value>224, 28</value>
+  </data>
+  <data name="msiSellPointsManagment.Text" xml:space="preserve">
+    <value>عرض نقاط البيع</value>
+  </data>
+  <data name="msiStocks.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 10pt, style=Bold</value>
   </data>
-  <data name="المخزنToolStripMenuItem.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+  <data name="msiStocks.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="المخزنToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="msiStocks.Size" type="System.Drawing.Size, System.Drawing">
     <value>104, 68</value>
   </data>
-  <data name="المخزنToolStripMenuItem.Text" xml:space="preserve">
+  <data name="msiStocks.Text" xml:space="preserve">
     <value>المخزن</value>
   </data>
   <data name="نقطةبيعToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
@@ -285,16 +309,40 @@
   <data name="&gt;&gt;ادراةالعملاءToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;ادارةالمنتجاتToolStripMenuItem.Name" xml:space="preserve">
-    <value>ادارةالمنتجاتToolStripMenuItem</value>
+  <data name="&gt;&gt;msiProducts.Name" xml:space="preserve">
+    <value>msiProducts</value>
   </data>
-  <data name="&gt;&gt;ادارةالمنتجاتToolStripMenuItem.Type" xml:space="preserve">
+  <data name="&gt;&gt;msiProducts.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;المخزنToolStripMenuItem.Name" xml:space="preserve">
-    <value>المخزنToolStripMenuItem</value>
+  <data name="&gt;&gt;msiStocks.Name" xml:space="preserve">
+    <value>msiStocks</value>
   </data>
-  <data name="&gt;&gt;المخزنToolStripMenuItem.Type" xml:space="preserve">
+  <data name="&gt;&gt;msiStocks.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;msiStocksManagment.Name" xml:space="preserve">
+    <value>msiStocksManagment</value>
+  </data>
+  <data name="&gt;&gt;msiStocksManagment.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;msiDamagedManagment.Name" xml:space="preserve">
+    <value>msiDamagedManagment</value>
+  </data>
+  <data name="&gt;&gt;msiDamagedManagment.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;msiBillsManagments.Name" xml:space="preserve">
+    <value>msiBillsManagments</value>
+  </data>
+  <data name="&gt;&gt;msiBillsManagments.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;msiSellPointsManagment.Name" xml:space="preserve">
+    <value>msiSellPointsManagment</value>
+  </data>
+  <data name="&gt;&gt;msiSellPointsManagment.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;نقطةبيعToolStripMenuItem.Name" xml:space="preserve">

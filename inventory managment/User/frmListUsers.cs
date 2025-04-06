@@ -31,6 +31,12 @@ namespace inventory_managment.User
             dgvUsers.DataSource = _dtAllUsers;
             cbFilterBy.SelectedIndex = 0;
             cbFilterByrole.Visible = false;
+
+            if(dgvUsers.RowCount == 0)
+            {
+                lblRecordCount.Text = "0";
+                return;
+            }
             lblRecordCount.Text = dgvUsers.RowCount.ToString();
             
             dgvUsers.Columns[0].Width = 110;
@@ -43,6 +49,8 @@ namespace inventory_managment.User
             dgvUsers.Columns[3].Width = 120;
 
             dgvUsers.Columns[4].Width = 120;
+            
+
 
         }
 
@@ -139,6 +147,52 @@ namespace inventory_managment.User
             _dtAllUsers.DefaultView.RowFilter = string.Format("[{0}] LIKE '%{1}%'", FilterColumn, FilteerValue);
             lblRecordCount.Text = dgvUsers.RowCount.ToString();
 
+        }
+
+        private void tmsShowUserInfo_Click(object sender, EventArgs e)
+        {
+            frmShowUserinfo ShowUserInfo = new frmShowUserinfo((int)dgvUsers.CurrentRow.Cells[0].Value);
+            ShowUserInfo.ShowDialog();
+        }
+
+        private void btnAddUser_Click(object sender, EventArgs e)
+        {
+            frmAddUpdateUser frmAddUpdateUser = new frmAddUpdateUser(-1);
+            frmAddUpdateUser.ShowDialog();
+            frmListUsers_Load(null, null);
+
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmAddUpdateUser frmAddUpdateUser = new frmAddUpdateUser((int)dgvUsers.CurrentRow.Cells[0].Value);
+            frmAddUpdateUser.ShowDialog();
+            frmListUsers_Load(null, null);
+        }
+
+        private void tmsAddUser_Click(object sender, EventArgs e)
+        {
+            frmAddUpdateUser frmAddUpdateUser = new frmAddUpdateUser(-1);
+            frmAddUpdateUser.ShowDialog();
+            frmListUsers_Load(null, null);
+        }
+
+        private void tmsStopUser_Click(object sender, EventArgs e)
+        {
+            if(clsUser.SetStop((int)dgvUsers.CurrentRow.Cells[0].Value))
+            {
+                MessageBox.Show("","",MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            MessageBox.Show("", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+
+        }
+
+        private void tbFilter_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (cbFilterBy.Text == "معرف المستخدم")
+                e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
     }
 }

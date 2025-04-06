@@ -54,6 +54,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.groupBox1.CausesValidation = false;
             this.groupBox1.Controls.Add(this.llremoveImage);
             this.groupBox1.Controls.Add(this.llChangeImage);
             this.groupBox1.Controls.Add(this.pbPersonPic);
@@ -116,7 +117,7 @@
             this.rtbAddress.Size = new System.Drawing.Size(358, 83);
             this.rtbAddress.TabIndex = 10;
             this.rtbAddress.Text = "";
-            this.rtbAddress.Validating += new System.ComponentModel.CancelEventHandler(this.ValidateEmptyTextBox);
+            this.rtbAddress.Validating += new System.ComponentModel.CancelEventHandler(this.ValidateEmptyRichTextBox);
             // 
             // label3
             // 

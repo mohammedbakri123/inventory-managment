@@ -32,8 +32,12 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.msiUserManagment = new System.Windows.Forms.ToolStripMenuItem();
             this.ادراةالعملاءToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ادارةالمنتجاتToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.المخزنToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.msiProducts = new System.Windows.Forms.ToolStripMenuItem();
+            this.msiStocks = new System.Windows.Forms.ToolStripMenuItem();
+            this.msiStocksManagment = new System.Windows.Forms.ToolStripMenuItem();
+            this.msiDamagedManagment = new System.Windows.Forms.ToolStripMenuItem();
+            this.msiBillsManagments = new System.Windows.Forms.ToolStripMenuItem();
+            this.msiSellPointsManagment = new System.Windows.Forms.ToolStripMenuItem();
             this.نقطةبيعToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.التقاريرToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.الأعدادتToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,8 +52,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.msiUserManagment,
             this.ادراةالعملاءToolStripMenuItem,
-            this.ادارةالمنتجاتToolStripMenuItem,
-            this.المخزنToolStripMenuItem,
+            this.msiProducts,
+            this.msiStocks,
             this.نقطةبيعToolStripMenuItem,
             this.التقاريرToolStripMenuItem,
             this.الأعدادتToolStripMenuItem});
@@ -68,24 +72,55 @@
             resources.ApplyResources(this.ادراةالعملاءToolStripMenuItem, "ادراةالعملاءToolStripMenuItem");
             this.ادراةالعملاءToolStripMenuItem.Image = global::inventory_managment.Properties.Resources.Drivers_64;
             this.ادراةالعملاءToolStripMenuItem.Name = "ادراةالعملاءToolStripMenuItem";
+            this.ادراةالعملاءToolStripMenuItem.Click += new System.EventHandler(this.ادراةالعملاءToolStripMenuItem_Click);
             // 
-            // ادارةالمنتجاتToolStripMenuItem
+            // msiProducts
             // 
-            resources.ApplyResources(this.ادارةالمنتجاتToolStripMenuItem, "ادارةالمنتجاتToolStripMenuItem");
-            this.ادارةالمنتجاتToolStripMenuItem.Image = global::inventory_managment.Properties.Resources.product322;
-            this.ادارةالمنتجاتToolStripMenuItem.Name = "ادارةالمنتجاتToolStripMenuItem";
+            resources.ApplyResources(this.msiProducts, "msiProducts");
+            this.msiProducts.Image = global::inventory_managment.Properties.Resources.quantity_23;
+            this.msiProducts.Name = "msiProducts";
+            this.msiProducts.Click += new System.EventHandler(this.ادارةالمنتجاتToolStripMenuItem_Click);
             // 
-            // المخزنToolStripMenuItem
+            // msiStocks
             // 
-            resources.ApplyResources(this.المخزنToolStripMenuItem, "المخزنToolStripMenuItem");
-            this.المخزنToolStripMenuItem.Image = global::inventory_managment.Properties.Resources.Local_32;
-            this.المخزنToolStripMenuItem.Name = "المخزنToolStripMenuItem";
+            this.msiStocks.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.msiStocksManagment,
+            this.msiDamagedManagment,
+            this.msiBillsManagments,
+            this.msiSellPointsManagment});
+            resources.ApplyResources(this.msiStocks, "msiStocks");
+            this.msiStocks.Image = global::inventory_managment.Properties.Resources.Local_32;
+            this.msiStocks.Name = "msiStocks";
+            // 
+            // msiStocksManagment
+            // 
+            this.msiStocksManagment.Name = "msiStocksManagment";
+            resources.ApplyResources(this.msiStocksManagment, "msiStocksManagment");
+            this.msiStocksManagment.Click += new System.EventHandler(this.ادارةالكمياتToolStripMenuItem_Click);
+            // 
+            // msiDamagedManagment
+            // 
+            this.msiDamagedManagment.Name = "msiDamagedManagment";
+            resources.ApplyResources(this.msiDamagedManagment, "msiDamagedManagment");
+            this.msiDamagedManagment.Click += new System.EventHandler(this.msiDamagedManagment_Click);
+            // 
+            // msiBillsManagments
+            // 
+            this.msiBillsManagments.Name = "msiBillsManagments";
+            resources.ApplyResources(this.msiBillsManagments, "msiBillsManagments");
+            this.msiBillsManagments.Click += new System.EventHandler(this.msiBillsManagments_Click);
+            // 
+            // msiSellPointsManagment
+            // 
+            this.msiSellPointsManagment.Name = "msiSellPointsManagment";
+            resources.ApplyResources(this.msiSellPointsManagment, "msiSellPointsManagment");
             // 
             // نقطةبيعToolStripMenuItem
             // 
             resources.ApplyResources(this.نقطةبيعToolStripMenuItem, "نقطةبيعToolStripMenuItem");
             this.نقطةبيعToolStripMenuItem.Image = global::inventory_managment.Properties.Resources.sellPoint32;
             this.نقطةبيعToolStripMenuItem.Name = "نقطةبيعToolStripMenuItem";
+            this.نقطةبيعToolStripMenuItem.Click += new System.EventHandler(this.نقطةبيعToolStripMenuItem_Click);
             // 
             // التقاريرToolStripMenuItem
             // 
@@ -132,11 +167,15 @@
         private System.Windows.Forms.ToolStripMenuItem msiUserManagment;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolStripMenuItem ادراةالعملاءToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ادارةالمنتجاتToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem المخزنToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem msiProducts;
+        private System.Windows.Forms.ToolStripMenuItem msiStocks;
         private System.Windows.Forms.ToolStripMenuItem نقطةبيعToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem التقاريرToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem الأعدادتToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem msiStocksManagment;
+        private System.Windows.Forms.ToolStripMenuItem msiDamagedManagment;
+        private System.Windows.Forms.ToolStripMenuItem msiBillsManagments;
+        private System.Windows.Forms.ToolStripMenuItem msiSellPointsManagment;
     }
 }
 

@@ -33,8 +33,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,8 +48,75 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Client\ctrlClientInformation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Client\ctrlClientInformation.Designer.cs">
+      <DependentUpon>ctrlClientInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Client\frmShowClientInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Client\frmShowClientInfo.Designer.cs">
+      <DependentUpon>frmShowClientInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Client\frmAddEditClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Client\frmAddEditClient.Designer.cs">
+      <DependentUpon>frmAddEditClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Client\frmListClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Client\frmListClient.Designer.cs">
+      <DependentUpon>frmListClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Client\payment\frmAddPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Client\payment\frmAddPayment.Designer.cs">
+      <DependentUpon>frmAddPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Client\payment\frmListPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Client\payment\frmListPayment.Designer.cs">
+      <DependentUpon>frmListPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stocks\Bills\frmListBills.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stocks\Bills\frmListBills.Designer.cs">
+      <DependentUpon>frmListBills.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stocks\Bills\frmShowBillInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stocks\Bills\frmShowBillInfo.Designer.cs">
+      <DependentUpon>frmShowBillInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stocks\Damaged\frmAddEditDamaged.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stocks\Damaged\frmAddEditDamaged.Designer.cs">
+      <DependentUpon>frmAddEditDamaged.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stocks\Damaged\frmListDamaged.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stocks\Damaged\frmListDamaged.Designer.cs">
+      <DependentUpon>frmListDamaged.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stocks\Damaged\frmShowDamagedInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stocks\Damaged\frmShowDamagedInfo.Designer.cs">
+      <DependentUpon>frmShowDamagedInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Global\clsUtil.cs" />
     <Compile Include="Main\frmLogin.cs">
       <SubType>Form</SubType>
@@ -72,13 +143,103 @@
     <Compile Include="Person\CtrlAddUpdatePerson.Designer.cs">
       <DependentUpon>CtrlAddUpdatePerson.cs</DependentUpon>
     </Compile>
+    <Compile Include="Product\Catagories\frmAddEditCatagory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Product\Catagories\frmAddEditCatagory.Designer.cs">
+      <DependentUpon>frmAddEditCatagory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Product\Catagories\frmListCatagories.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Product\Catagories\frmListCatagories.Designer.cs">
+      <DependentUpon>frmListCatagories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Product\frmShowProductMovement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Product\frmShowProductMovement.Designer.cs">
+      <DependentUpon>frmShowProductMovement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Product\frmAddEditProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Product\frmAddEditProduct.Designer.cs">
+      <DependentUpon>frmAddEditProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Product\frmListProducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Product\frmListProducts.Designer.cs">
+      <DependentUpon>frmListProducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Product\frmShowProductInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Product\frmShowProductInfo.Designer.cs">
+      <DependentUpon>frmShowProductInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SellPoint\frmEditQuantity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SellPoint\frmEditQuantity.Designer.cs">
+      <DependentUpon>frmEditQuantity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SellPoint\frmListSellPoint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SellPoint\frmListSellPoint.Designer.cs">
+      <DependentUpon>frmListSellPoint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SellPoint\frmPayTheBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SellPoint\frmPayTheBill.Designer.cs">
+      <DependentUpon>frmPayTheBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SellPoint\frmSelectClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SellPoint\frmSelectClient.Designer.cs">
+      <DependentUpon>frmSelectClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SellPoint\frmSellPoint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SellPoint\frmSellPoint.Designer.cs">
+      <DependentUpon>frmSellPoint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stocks\frmListStocks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stocks\frmListStocks.Designer.cs">
+      <DependentUpon>frmListStocks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stocks\frmAddEditStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stocks\frmAddEditStock.Designer.cs">
+      <DependentUpon>frmAddEditStock.cs</DependentUpon>
+    </Compile>
     <Compile Include="User\Controls\ctrlShowUserInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="User\Controls\ctrlShowUserInfo.Designer.cs">
       <DependentUpon>ctrlShowUserInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\frmAddUpdateUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\frmAddUpdateUser.Designer.cs">
+      <DependentUpon>frmAddUpdateUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\frmShowUserinfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\frmShowUserinfo.Designer.cs">
+      <DependentUpon>frmShowUserinfo.cs</DependentUpon>
     </Compile>
     <Compile Include="User\frmListUsers.cs">
       <SubType>Form</SubType>
@@ -86,6 +247,36 @@
     <Compile Include="User\frmListUsers.Designer.cs">
       <DependentUpon>frmListUsers.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Client\ctrlClientInformation.resx">
+      <DependentUpon>ctrlClientInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Client\frmAddEditClient.resx">
+      <DependentUpon>frmAddEditClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Client\frmListClient.resx">
+      <DependentUpon>frmListClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Client\frmShowClientInfo.resx">
+      <DependentUpon>frmShowClientInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Client\payment\frmAddPayment.resx">
+      <DependentUpon>frmAddPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Client\payment\frmListPayment.resx">
+      <DependentUpon>frmListPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stocks\Bills\frmListBills.resx">
+      <DependentUpon>frmListBills.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stocks\Bills\frmShowBillInfo.resx">
+      <DependentUpon>frmShowBillInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stocks\Damaged\frmAddEditDamaged.resx">
+      <DependentUpon>frmAddEditDamaged.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stocks\Damaged\frmListDamaged.resx">
+      <DependentUpon>frmListDamaged.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -101,6 +292,21 @@
     <EmbeddedResource Include="Person\CtrlShowPersonInfo.resx">
       <DependentUpon>CtrlShowPersonInfo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Product\Catagories\frmAddEditCatagory.resx">
+      <DependentUpon>frmAddEditCatagory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Product\Catagories\frmListCatagories.resx">
+      <DependentUpon>frmListCatagories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Product\frmAddEditProduct.resx">
+      <DependentUpon>frmAddEditProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Product\frmListProducts.resx">
+      <DependentUpon>frmListProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Product\frmShowProductInfo.resx">
+      <DependentUpon>frmShowProductInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -111,11 +317,38 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SellPoint\frmEditQuantity.resx">
+      <DependentUpon>frmEditQuantity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SellPoint\frmListSellPoint.resx">
+      <DependentUpon>frmListSellPoint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SellPoint\frmPayTheBill.resx">
+      <DependentUpon>frmPayTheBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SellPoint\frmSelectClient.resx">
+      <DependentUpon>frmSelectClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SellPoint\frmSellPoint.resx">
+      <DependentUpon>frmSellPoint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stocks\frmListStocks.resx">
+      <DependentUpon>frmListStocks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stocks\frmAddEditStock.resx">
+      <DependentUpon>frmAddEditStock.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="User\Controls\ctrlShowUserInfo.resx">
       <DependentUpon>ctrlShowUserInfo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="User\frmAddUpdateUser.resx">
+      <DependentUpon>frmAddUpdateUser.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="User\frmListUsers.resx">
       <DependentUpon>frmListUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\frmShowUserinfo.resx">
+      <DependentUpon>frmShowUserinfo.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -493,6 +726,107 @@
   <ItemGroup>
     <None Include="Resources\inventory-Login.gif" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\edirProduct32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeleteProduct32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddProduct32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Product232.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edirProduct512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeleteProduct512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddProduct512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Product512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeleteProduct64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddProduct64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\category 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\category 64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Category2 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Category2 64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddCategory 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddCategory 64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete 321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete 64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inventory 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inventory 64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quantity 23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quantity 64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add 64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit 321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit 64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit 512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add 256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quantity 512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inventory 512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete 512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddCategory 512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Category2 512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\category 512.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -15,7 +15,9 @@ namespace inventory_managment.Person
 {
     public partial class CtrlShowPersonInfo : UserControl
     {
+
         private clsPerson _person;
+
         public clsPerson SelectedPerson { get { return _person; } }
 
         private int _PersonID = -1;
@@ -46,16 +48,7 @@ namespace inventory_managment.Person
 
         }
 
-        public void _LoadImage()
-        {
-            string ImagePath = _person.ImagePath;
-            if (ImagePath != "")
-                if (File.Exists(ImagePath))
-                    pbPersonPic.ImageLocation = ImagePath;
-                else
-                    MessageBox.Show("Could not find this image: = " + ImagePath, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-        }
 
         private void _FillPersonInfo()
         {
@@ -63,6 +56,8 @@ namespace inventory_managment.Person
             lblNameValue.Text = _person.FullName;
             lblPhoneValue.Text = _person.Phone;
             lblAddressValue.Text = _person.Address;
+            if(_person.ImagePath != "")
+            pbPersonPic.ImageLocation = _person.ImagePath;
         }
 
     }
