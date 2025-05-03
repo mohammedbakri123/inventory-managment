@@ -13,7 +13,7 @@ namespace inventory_managment.Stocks.Bills
 {
     public partial class frmShowBillInfo : Form
     {
-
+        //fix the shite
 
         int BillID;
         clsBill _bill;
