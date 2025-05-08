@@ -159,25 +159,25 @@
     <value>ادارة المنتجات</value>
   </data>
   <data name="msiStocksManagment.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 28</value>
+    <value>208, 28</value>
   </data>
   <data name="msiStocksManagment.Text" xml:space="preserve">
     <value>ادارة الكميات</value>
   </data>
   <data name="msiDamagedManagment.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 28</value>
+    <value>208, 28</value>
   </data>
   <data name="msiDamagedManagment.Text" xml:space="preserve">
     <value>عرض التوالف</value>
   </data>
   <data name="msiBillsManagments.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 28</value>
+    <value>208, 28</value>
   </data>
   <data name="msiBillsManagments.Text" xml:space="preserve">
     <value>عرض الفواتير</value>
   </data>
   <data name="msiSellPointsManagment.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 28</value>
+    <value>208, 28</value>
   </data>
   <data name="msiSellPointsManagment.Text" xml:space="preserve">
     <value>عرض نقاط البيع</value>

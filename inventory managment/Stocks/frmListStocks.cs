@@ -36,6 +36,8 @@ namespace inventory_managment.Stocks
                 lblRecordCount.Text = "0";
                 lblCostPrice.Text = "0";
                 lblSellPrice.Text = "0";
+                cbFilterBy.Enabled = false;
+                checkShowDone.Enabled = false;
                 return;
             }
             lblRecordCount.Text = _CalcualateQuantity().ToString();
@@ -63,7 +65,8 @@ namespace inventory_managment.Stocks
             dgvStocks.Columns[9].Width = 200;
             
             dgvStocks.Columns[10].Width = 50;
-
+            cbFilterBy.Enabled = true;
+            checkShowDone.Enabled = true;
 
         }
 

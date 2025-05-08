@@ -279,6 +279,11 @@ namespace inventory_managment.SellPoint
 
         private void Addbill_Click(object sender, EventArgs e)
         {
+            if (_soldList.Count == 0)
+            {
+                MessageBox.Show("لا يمكن طباعة فاتورة فارغة", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             _CurrentBill.totalPrice =new SqlMoney(CalculateBillTotalPrice());
             _CurrentBill.Client = _client;
             _CurrentBill.IssueDate = DateTime.Now;
@@ -331,7 +336,7 @@ namespace inventory_managment.SellPoint
             {
                 _seller.TotoalBills = clsSellPoint.GetTotalBills(_seller.ID);
 
-                _seller.Amount = new SqlMoney(clsSellPoint.GetTotalAmount(_seller.ID));
+                _seller.Amount = clsSellPoint.GetTotalAmount(_seller.ID);
                 _seller.End = DateTime.Now;
                 if (_seller.TotoalBills == 0)
                 {
@@ -350,7 +355,7 @@ namespace inventory_managment.SellPoint
             this.Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnClearSolds_Click(object sender, EventArgs e)
         {
             if (_soldList.Count > 0)
             {
@@ -433,6 +438,7 @@ namespace inventory_managment.SellPoint
                     QuantityOutOfRange = QuantityWanted - CurrentStockQuantity;
 
                     _soldList.ElementAt(dgvCurrentSolds.CurrentRow.Index).quantity += CurrentStockQuantity;
+                    _soldList.ElementAt(dgvCurrentSolds.CurrentRow.Index).TotalPrice = _soldList.ElementAt(dgvCurrentSolds.CurrentRow.Index).quantity * _soldList.ElementAt(dgvCurrentSolds.CurrentRow.Index).PricePerOne;
                     _soldList.ElementAt(dgvCurrentSolds.CurrentRow.Index).Stock.CurrentQuantity = 0;
                     _soldList.ElementAt(dgvCurrentSolds.CurrentRow.Index).save();
 
@@ -487,6 +493,8 @@ namespace inventory_managment.SellPoint
 
                     _soldList.ElementAt(dgvCurrentSolds.CurrentRow.Index).quantity = QuantityWanted;
                     _soldList.ElementAt(dgvCurrentSolds.CurrentRow.Index).Stock.CurrentQuantity -= QuantityWanted - 1;
+                    _soldList.ElementAt(dgvCurrentSolds.CurrentRow.Index).TotalPrice = _soldList.ElementAt(dgvCurrentSolds.CurrentRow.Index).quantity * _soldList.ElementAt(dgvCurrentSolds.CurrentRow.Index).PricePerOne;
+
                     _soldList.ElementAt(dgvCurrentSolds.CurrentRow.Index).save();
 
                 }
@@ -495,6 +503,8 @@ namespace inventory_managment.SellPoint
             {
                 int OverFlowQuantity = _soldList.ElementAt(dgvCurrentSolds.CurrentRow.Index).quantity - QuantityWanted;
                 _soldList.ElementAt(dgvCurrentSolds.CurrentRow.Index).quantity = QuantityWanted;
+                _soldList.ElementAt(dgvCurrentSolds.CurrentRow.Index).TotalPrice = _soldList.ElementAt(dgvCurrentSolds.CurrentRow.Index).quantity * _soldList.ElementAt(dgvCurrentSolds.CurrentRow.Index).PricePerOne;
+
                 _soldList.ElementAt(dgvCurrentSolds.CurrentRow.Index).Stock.CurrentQuantity += OverFlowQuantity;
                 _soldList.ElementAt(dgvCurrentSolds.CurrentRow.Index).save();
             }
@@ -513,6 +523,42 @@ namespace inventory_managment.SellPoint
             frm.ShowDialog();
             this._client = clsCLient.find(frm.ClientId);
             lblClientName.Text = _client.CompanyName;
+        }
+
+        private void btnCalculateTotalAmount_Click(object sender, EventArgs e)
+        {
+            if (_soldList.Count > 0)
+            {
+
+                foreach (var item in _soldList)
+                {
+
+                    if (clsSold.delete(item.ID))
+                    {
+                        item.Stock = clsStock.Find(item.Stock.ID);
+                        item.Stock.CurrentQuantity += item.quantity;
+                        item.Stock.save();
+
+
+                    }
+                }
+                
+
+            _soldList.Clear();
+            }
+            clsBill.delete(_CurrentBill.ID);
+
+
+            _seller.TotoalBills = clsSellPoint.GetTotalBills(_seller.ID);
+            _seller.Amount = clsSellPoint.GetTotalAmount(_seller.ID);
+            _seller.End = DateTime.Now;
+
+            if (_seller.save())
+            {
+                frmShowSellPointInfo frm = new frmShowSellPointInfo(_seller.ID);
+                frm.ShowDialog();
+            }
+            resetDefault();
         }
     }
 }

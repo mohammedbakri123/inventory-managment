@@ -99,7 +99,7 @@ namespace inventory_managment_business
             return clsSellPointData.GetAll();
         }
 
-        public static int GetTotalAmount(int ID)
+        public static SqlMoney GetTotalAmount(int ID)
         {
             return clsSellPointData.GetTotalAmount(ID);
         

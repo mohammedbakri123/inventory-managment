@@ -114,6 +114,7 @@
             // 
             this.msiSellPointsManagment.Name = "msiSellPointsManagment";
             resources.ApplyResources(this.msiSellPointsManagment, "msiSellPointsManagment");
+            this.msiSellPointsManagment.Click += new System.EventHandler(this.msiSellPointsManagment_Click);
             // 
             // نقطةبيعToolStripMenuItem
             // 
@@ -127,6 +128,7 @@
             resources.ApplyResources(this.التقاريرToolStripMenuItem, "التقاريرToolStripMenuItem");
             this.التقاريرToolStripMenuItem.Image = global::inventory_managment.Properties.Resources.Schedule_Test_32;
             this.التقاريرToolStripMenuItem.Name = "التقاريرToolStripMenuItem";
+            this.التقاريرToolStripMenuItem.Click += new System.EventHandler(this.التقاريرToolStripMenuItem_Click);
             // 
             // الأعدادتToolStripMenuItem
             // 

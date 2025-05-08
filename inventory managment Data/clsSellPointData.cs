@@ -204,10 +204,10 @@ namespace inventory_managment_Data
             return dataTable; 
         }
 
-        public static int GetTotalAmount(int ID)
+        public static SqlMoney GetTotalAmount(int ID)
         {
-            int Amount = 0;
-            string quary = "select SUM(PaidPrice) as sum  from Bills where sellPointID = @ID";
+            SqlMoney Amount = 0;
+            string quary = "select  SUM(PaidPrice) as sum  from Bills where sellPointID = @ID";
             try
             {
                 using (SqlConnection sqlConnection = new SqlConnection(DataAccessSettings.ConnectionString))
@@ -224,7 +224,7 @@ namespace inventory_managment_Data
                                     Amount = 0;
                                 else
                                 {
-                                    Amount = (int)reader["sum"];
+                                    Amount = new SqlMoney((decimal)reader["sum"]);
                                 }
                             }
                         }

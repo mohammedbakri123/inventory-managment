@@ -174,5 +174,10 @@ namespace inventory_managment.Client
             frm.SetForClient((int)dgvClient.CurrentRow.Cells[0].Value);
             frm.ShowDialog();
         }
+
+        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        {
+             
+        }
     }
 }

@@ -46,6 +46,8 @@
             this.btnAddUser = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.tmsShowBills = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -74,10 +76,12 @@
             this.toolStripSeparator1,
             this.tmsAddUser,
             this.toolStripMenuItem1,
-            this.tmsStopUser});
+            this.tmsStopUser,
+            this.toolStripSeparator2,
+            this.tmsShowBills});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.contextMenuStrip1.Size = new System.Drawing.Size(260, 162);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(260, 234);
             // 
             // tmsShowUserInfo
             // 
@@ -239,6 +243,20 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(256, 6);
+            // 
+            // tmsShowBills
+            // 
+            this.tmsShowBills.Image = global::inventory_managment.Properties.Resources.PassedTests_32;
+            this.tmsShowBills.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tmsShowBills.Name = "tmsShowBills";
+            this.tmsShowBills.Size = new System.Drawing.Size(259, 38);
+            this.tmsShowBills.Text = "عرض الفواتير";
+            this.tmsShowBills.Click += new System.EventHandler(this.tmsShowBills_Click);
+            // 
             // frmListUsers
             // 
             this.AcceptButton = this.btnAddUser;
@@ -295,5 +313,7 @@
         private System.Windows.Forms.ToolStripMenuItem tmsAddUser;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem tmsStopUser;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripMenuItem tmsShowBills;
     }
 }

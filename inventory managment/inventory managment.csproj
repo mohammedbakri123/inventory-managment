@@ -87,6 +87,18 @@
     <Compile Include="Client\payment\frmListPayment.Designer.cs">
       <DependentUpon>frmListPayment.cs</DependentUpon>
     </Compile>
+    <Compile Include="Main\frmRepots.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\frmRepots.Designer.cs">
+      <DependentUpon>frmRepots.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SellPoint\frmShowSellPointInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SellPoint\frmShowSellPointInfo.Designer.cs">
+      <DependentUpon>frmShowSellPointInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Stocks\Bills\frmListBills.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -264,6 +276,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Client\payment\frmListPayment.resx">
       <DependentUpon>frmListPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\frmRepots.resx">
+      <DependentUpon>frmRepots.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SellPoint\frmShowSellPointInfo.resx">
+      <DependentUpon>frmShowSellPointInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Stocks\Bills\frmListBills.resx">
       <DependentUpon>frmListBills.cs</DependentUpon>

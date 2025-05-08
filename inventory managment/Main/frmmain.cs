@@ -1,6 +1,7 @@
 ﻿using inventory_managment.Client;
 using inventory_managment.Damaged;
 using inventory_managment.Global;
+using inventory_managment.Main;
 using inventory_managment.Product;
 using inventory_managment.SellPoint;
 using inventory_managment.Stocks;
@@ -71,6 +72,18 @@ namespace inventory_managment
         private void msiBillsManagments_Click(object sender, EventArgs e)
         {
             frmListBills frm = new frmListBills();
+            frm.ShowDialog();
+        }
+
+        private void msiSellPointsManagment_Click(object sender, EventArgs e)
+        {
+            frmListSellPoint frm = new frmListSellPoint();
+            frm.ShowDialog();
+        }
+
+        private void التقاريرToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRepots frm = new frmRepots();
             frm.ShowDialog();
         }
     }

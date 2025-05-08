@@ -1,4 +1,5 @@
-﻿using inventory_managment_business;
+﻿using inventory_managment.Stocks.Bills;
+using inventory_managment_business;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -193,6 +194,13 @@ namespace inventory_managment.User
         {
             if (cbFilterBy.Text == "معرف المستخدم")
                 e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void tmsShowBills_Click(object sender, EventArgs e)
+        {
+            frmListBills frm = new frmListBills();
+            frm.SetForUser((int)dgvUsers.CurrentRow.Cells[0].Value);
+            frm.ShowDialog();
         }
     }
 }

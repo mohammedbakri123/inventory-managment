@@ -263,6 +263,7 @@
             resources.ApplyResources(this.btnCalculateTotalAmount, "btnCalculateTotalAmount");
             this.btnCalculateTotalAmount.Name = "btnCalculateTotalAmount";
             this.btnCalculateTotalAmount.UseVisualStyleBackColor = false;
+            this.btnCalculateTotalAmount.Click += new System.EventHandler(this.btnCalculateTotalAmount_Click);
             // 
             // btnClearSolds
             // 
@@ -270,7 +271,7 @@
             resources.ApplyResources(this.btnClearSolds, "btnClearSolds");
             this.btnClearSolds.Name = "btnClearSolds";
             this.btnClearSolds.UseVisualStyleBackColor = false;
-            this.btnClearSolds.Click += new System.EventHandler(this.button1_Click);
+            this.btnClearSolds.Click += new System.EventHandler(this.btnClearSolds_Click);
             // 
             // frmSellPoint
             // 
