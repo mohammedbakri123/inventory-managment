@@ -859,5 +859,68 @@
   <ItemGroup>
     <None Include="Resources\category 512.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Damaged32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Damaged64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Payment32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Payment64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paymentlist32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paymentlist64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\billList32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\billList64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Settings64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Settings32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Reports32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Reports64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Products3D 64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Products3D 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Products3D 512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Reports512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Settings1000.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\billList2000.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paymentlist512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Payment512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Damaged512.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -560,5 +560,61 @@ namespace inventory_managment.SellPoint
             }
             resetDefault();
         }
+
+        private void frmSellPoint_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch(e.KeyCode)
+            {
+                case Keys.F1:
+                    Addbill_Click(null,null);
+                    break;
+                case Keys.F2:
+                    btnClearSolds_Click(null,null);
+                    break;
+                case Keys.F3:
+                    btnNewBill_Click(null,null);
+                    break;
+                case Keys.F4:
+                    btnChangeClient_Click(null,null);
+                    break;
+                case Keys.F5:
+                    btnPublicClientBack_Click(null, null);
+                    break;
+                case Keys.F6:
+                    btnCalculateTotalAmount_Click(null,null);
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        private void tbFilter_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.F1:
+                    Addbill_Click(null, null);
+                    break;
+                case Keys.F2:
+                    btnClearSolds_Click(null, null);
+                    break;
+                case Keys.F3:
+                    btnNewBill_Click(null, null);
+                    break;
+                case Keys.F4:
+                    btnChangeClient_Click(null, null);
+                    break;
+                case Keys.F5:
+                    btnPublicClientBack_Click(null, null);
+                    break;
+                case Keys.F6:
+                    btnCalculateTotalAmount_Click(null, null);
+                    break;
+                default:
+                    break;
+            }
+
+
+        }
     }
 }

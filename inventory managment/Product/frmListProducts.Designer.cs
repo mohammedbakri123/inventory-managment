@@ -38,18 +38,18 @@
             this.lblProducts = new System.Windows.Forms.Label();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.tmsAddStock = new System.Windows.Forms.ToolStripMenuItem();
+            this.tmsProductMovement = new System.Windows.Forms.ToolStripMenuItem();
+            this.dgvProducts = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tmsShowProductInfo = new System.Windows.Forms.ToolStripMenuItem();
             this.tmsAddProduct = new System.Windows.Forms.ToolStripMenuItem();
             this.tmsUpdate = new System.Windows.Forms.ToolStripMenuItem();
             this.tmsDelete = new System.Windows.Forms.ToolStripMenuItem();
-            this.dgvProducts = new System.Windows.Forms.DataGridView();
-            this.btnClose = new System.Windows.Forms.Button();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.tmsAddStock = new System.Windows.Forms.ToolStripMenuItem();
-            this.tmsProductMovement = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -157,7 +157,90 @@
             this.tmsProductMovement});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.contextMenuStrip1.Size = new System.Drawing.Size(235, 272);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(235, 244);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(231, 6);
+            // 
+            // tmsAddStock
+            // 
+            this.tmsAddStock.Name = "tmsAddStock";
+            this.tmsAddStock.Size = new System.Drawing.Size(234, 38);
+            this.tmsAddStock.Text = "اضافة كمية";
+            this.tmsAddStock.Click += new System.EventHandler(this.tmsAddStock_Click);
+            // 
+            // tmsProductMovement
+            // 
+            this.tmsProductMovement.Name = "tmsProductMovement";
+            this.tmsProductMovement.Size = new System.Drawing.Size(234, 38);
+            this.tmsProductMovement.Text = "عرض حركة المنتج";
+            // 
+            // dgvProducts
+            // 
+            this.dgvProducts.AllowUserToAddRows = false;
+            this.dgvProducts.AllowUserToDeleteRows = false;
+            this.dgvProducts.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProducts.ContextMenuStrip = this.contextMenuStrip1;
+            this.dgvProducts.Location = new System.Drawing.Point(7, 451);
+            this.dgvProducts.Name = "dgvProducts";
+            this.dgvProducts.ReadOnly = true;
+            this.dgvProducts.RowHeadersWidth = 51;
+            this.dgvProducts.RowTemplate.Height = 24;
+            this.dgvProducts.Size = new System.Drawing.Size(1359, 396);
+            this.dgvProducts.TabIndex = 11;
+            // 
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Image = global::inventory_managment.Properties.Resources.Category2_32;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(1099, 370);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(176, 75);
+            this.button1.TabIndex = 22;
+            this.button1.Text = "     ادارة الانواع";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnClose
+            // 
+            this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.Image = global::inventory_managment.Properties.Resources.Close_32;
+            this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClose.Location = new System.Drawing.Point(1252, 856);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(114, 45);
+            this.btnClose.TabIndex = 15;
+            this.btnClose.Text = "    إغلاق";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.Image = global::inventory_managment.Properties.Resources.AddProduct64;
+            this.btnAdd.Location = new System.Drawing.Point(1281, 370);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(85, 75);
+            this.btnAdd.TabIndex = 14;
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::inventory_managment.Properties.Resources.Products3D_512;
+            this.pictureBox1.Location = new System.Drawing.Point(553, 36);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(290, 247);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
             // 
             // tmsShowProductInfo
             // 
@@ -194,89 +277,6 @@
             this.tmsDelete.Name = "tmsDelete";
             this.tmsDelete.Size = new System.Drawing.Size(234, 38);
             this.tmsDelete.Text = "حذف";
-            // 
-            // dgvProducts
-            // 
-            this.dgvProducts.AllowUserToAddRows = false;
-            this.dgvProducts.AllowUserToDeleteRows = false;
-            this.dgvProducts.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dgvProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProducts.ContextMenuStrip = this.contextMenuStrip1;
-            this.dgvProducts.Location = new System.Drawing.Point(7, 451);
-            this.dgvProducts.Name = "dgvProducts";
-            this.dgvProducts.ReadOnly = true;
-            this.dgvProducts.RowHeadersWidth = 51;
-            this.dgvProducts.RowTemplate.Height = 24;
-            this.dgvProducts.Size = new System.Drawing.Size(1359, 396);
-            this.dgvProducts.TabIndex = 11;
-            // 
-            // btnClose
-            // 
-            this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.Image = global::inventory_managment.Properties.Resources.Close_32;
-            this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose.Location = new System.Drawing.Point(1252, 856);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(114, 45);
-            this.btnClose.TabIndex = 15;
-            this.btnClose.Text = "    إغلاق";
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.Image = global::inventory_managment.Properties.Resources.AddProduct64;
-            this.btnAdd.Location = new System.Drawing.Point(1281, 370);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(85, 75);
-            this.btnAdd.TabIndex = 14;
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::inventory_managment.Properties.Resources.Product512;
-            this.pictureBox1.Location = new System.Drawing.Point(572, 54);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(262, 229);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 12;
-            this.pictureBox1.TabStop = false;
-            // 
-            // button1
-            // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = global::inventory_managment.Properties.Resources.Category2_32;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(1099, 370);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(176, 75);
-            this.button1.TabIndex = 22;
-            this.button1.Text = "     ادارة الانواع";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(231, 6);
-            // 
-            // tmsAddStock
-            // 
-            this.tmsAddStock.Name = "tmsAddStock";
-            this.tmsAddStock.Size = new System.Drawing.Size(234, 38);
-            this.tmsAddStock.Text = "اضافة كمية";
-            this.tmsAddStock.Click += new System.EventHandler(this.tmsAddStock_Click);
-            // 
-            // tmsProductMovement
-            // 
-            this.tmsProductMovement.Name = "tmsProductMovement";
-            this.tmsProductMovement.Size = new System.Drawing.Size(234, 38);
-            this.tmsProductMovement.Text = "عرض حركة المنتج";
             // 
             // frmListProducts
             // 

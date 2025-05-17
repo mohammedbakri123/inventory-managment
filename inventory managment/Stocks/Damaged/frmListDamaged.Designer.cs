@@ -124,8 +124,8 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::inventory_managment.Properties.Resources.inventory_512;
-            this.pictureBox1.Location = new System.Drawing.Point(627, 43);
+            this.pictureBox1.Image = global::inventory_managment.Properties.Resources.Damaged512;
+            this.pictureBox1.Location = new System.Drawing.Point(628, 47);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(262, 229);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

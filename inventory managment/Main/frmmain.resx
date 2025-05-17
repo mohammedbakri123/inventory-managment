@@ -158,30 +158,6 @@
   <data name="msiProducts.Text" xml:space="preserve">
     <value>ادارة المنتجات</value>
   </data>
-  <data name="msiStocksManagment.Size" type="System.Drawing.Size, System.Drawing">
-    <value>208, 28</value>
-  </data>
-  <data name="msiStocksManagment.Text" xml:space="preserve">
-    <value>ادارة الكميات</value>
-  </data>
-  <data name="msiDamagedManagment.Size" type="System.Drawing.Size, System.Drawing">
-    <value>208, 28</value>
-  </data>
-  <data name="msiDamagedManagment.Text" xml:space="preserve">
-    <value>عرض التوالف</value>
-  </data>
-  <data name="msiBillsManagments.Size" type="System.Drawing.Size, System.Drawing">
-    <value>208, 28</value>
-  </data>
-  <data name="msiBillsManagments.Text" xml:space="preserve">
-    <value>عرض الفواتير</value>
-  </data>
-  <data name="msiSellPointsManagment.Size" type="System.Drawing.Size, System.Drawing">
-    <value>208, 28</value>
-  </data>
-  <data name="msiSellPointsManagment.Text" xml:space="preserve">
-    <value>عرض نقاط البيع</value>
-  </data>
   <data name="msiStocks.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 10pt, style=Bold</value>
   </data>
@@ -218,10 +194,55 @@
   <data name="التقاريرToolStripMenuItem.Text" xml:space="preserve">
     <value>التقارير</value>
   </data>
-  <data name="الأعدادتToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>79, 68</value>
+  <data name="tmsCurrentUser.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
   </data>
-  <data name="الأعدادتToolStripMenuItem.Text" xml:space="preserve">
+  <data name="tmsCurrentUser.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="tmsCurrentUser.Size" type="System.Drawing.Size, System.Drawing">
+    <value>271, 38</value>
+  </data>
+  <data name="tmsCurrentUser.Text" xml:space="preserve">
+    <value>بيانات المستخدم الحالي</value>
+  </data>
+  <data name="tmsUpdateCurrentUser.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="tmsUpdateCurrentUser.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="tmsUpdateCurrentUser.Size" type="System.Drawing.Size, System.Drawing">
+    <value>271, 38</value>
+  </data>
+  <data name="tmsUpdateCurrentUser.Text" xml:space="preserve">
+    <value>تعديل المستخدم</value>
+  </data>
+  <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>268, 6</value>
+  </data>
+  <data name="tmsLogOut.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="tmsLogOut.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="tmsLogOut.Size" type="System.Drawing.Size, System.Drawing">
+    <value>271, 38</value>
+  </data>
+  <data name="tmsLogOut.Text" xml:space="preserve">
+    <value>تسجيل الخروج</value>
+  </data>
+  <data name="tmsSettins.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10pt, style=Bold</value>
+  </data>
+  <data name="tmsSettins.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="tmsSettins.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 68</value>
+  </data>
+  <data name="tmsSettins.Text" xml:space="preserve">
     <value>الأعدادت</value>
   </data>
   <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
@@ -248,6 +269,54 @@
   </data>
   <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="msiStocksManagment.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="msiStocksManagment.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="msiStocksManagment.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 38</value>
+  </data>
+  <data name="msiStocksManagment.Text" xml:space="preserve">
+    <value>ادارة الكميات</value>
+  </data>
+  <data name="msiDamagedManagment.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="msiDamagedManagment.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="msiDamagedManagment.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 38</value>
+  </data>
+  <data name="msiDamagedManagment.Text" xml:space="preserve">
+    <value>عرض التوالف</value>
+  </data>
+  <data name="msiBillsManagments.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="msiBillsManagments.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="msiBillsManagments.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 38</value>
+  </data>
+  <data name="msiBillsManagments.Text" xml:space="preserve">
+    <value>عرض الفواتير</value>
+  </data>
+  <data name="msiSellPointsManagment.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="msiSellPointsManagment.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="msiSellPointsManagment.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 38</value>
+  </data>
+  <data name="msiSellPointsManagment.Text" xml:space="preserve">
+    <value>عرض نقاط البيع</value>
   </data>
   <data name="pictureBox1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -357,10 +426,34 @@
   <data name="&gt;&gt;التقاريرToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;الأعدادتToolStripMenuItem.Name" xml:space="preserve">
-    <value>الأعدادتToolStripMenuItem</value>
+  <data name="&gt;&gt;tmsSettins.Name" xml:space="preserve">
+    <value>tmsSettins</value>
   </data>
-  <data name="&gt;&gt;الأعدادتToolStripMenuItem.Type" xml:space="preserve">
+  <data name="&gt;&gt;tmsSettins.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tmsCurrentUser.Name" xml:space="preserve">
+    <value>tmsCurrentUser</value>
+  </data>
+  <data name="&gt;&gt;tmsCurrentUser.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tmsUpdateCurrentUser.Name" xml:space="preserve">
+    <value>tmsUpdateCurrentUser</value>
+  </data>
+  <data name="&gt;&gt;tmsUpdateCurrentUser.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator1.Name" xml:space="preserve">
+    <value>toolStripSeparator1</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tmsLogOut.Name" xml:space="preserve">
+    <value>tmsLogOut</value>
+  </data>
+  <data name="&gt;&gt;tmsLogOut.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

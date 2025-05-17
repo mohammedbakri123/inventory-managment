@@ -26,11 +26,17 @@ namespace inventory_managment
                 this.Hide();
                 frmMain frmMain = new frmMain();
                 frmMain.ShowDialog();
+                this.Show();
             }
             else
             {
                 MessageBox.Show("اسم المستخدم او كلمة المرور خاطئة", "خطأ",MessageBoxButtons.OK , MessageBoxIcon.Error);
             }
+        }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

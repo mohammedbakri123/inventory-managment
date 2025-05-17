@@ -31,7 +31,10 @@
             this.components = new System.ComponentModel.Container();
             this.dgvBills = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tmsShowBillInfo = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.tmsEditBill = new System.Windows.Forms.ToolStripMenuItem();
+            this.tmsDeleteBill = new System.Windows.Forms.ToolStripMenuItem();
             this.tbFilter = new System.Windows.Forms.TextBox();
             this.cbFilterBy = new System.Windows.Forms.ComboBox();
             this.lblRecordCount = new System.Windows.Forms.Label();
@@ -40,9 +43,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.tmsShowBillInfo = new System.Windows.Forms.ToolStripMenuItem();
-            this.tmsEditBill = new System.Windows.Forms.ToolStripMenuItem();
-            this.tmsDeleteBill = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBills)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -73,12 +73,38 @@
             this.tmsDeleteBill});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.contextMenuStrip1.Size = new System.Drawing.Size(245, 152);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(245, 124);
+            // 
+            // tmsShowBillInfo
+            // 
+            this.tmsShowBillInfo.Image = global::inventory_managment.Properties.Resources.PersonDetails_32;
+            this.tmsShowBillInfo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tmsShowBillInfo.Name = "tmsShowBillInfo";
+            this.tmsShowBillInfo.Size = new System.Drawing.Size(244, 38);
+            this.tmsShowBillInfo.Text = "عرض معلومات الفاتورة";
+            this.tmsShowBillInfo.Click += new System.EventHandler(this.tmsShowBillInfo_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(241, 6);
+            // 
+            // tmsEditBill
+            // 
+            this.tmsEditBill.Image = global::inventory_managment.Properties.Resources.edit_32;
+            this.tmsEditBill.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tmsEditBill.Name = "tmsEditBill";
+            this.tmsEditBill.Size = new System.Drawing.Size(244, 38);
+            this.tmsEditBill.Text = "تعديل معلومات الفاتورة";
+            // 
+            // tmsDeleteBill
+            // 
+            this.tmsDeleteBill.Image = global::inventory_managment.Properties.Resources.Delete_32;
+            this.tmsDeleteBill.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.tmsDeleteBill.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tmsDeleteBill.Name = "tmsDeleteBill";
+            this.tmsDeleteBill.Size = new System.Drawing.Size(244, 38);
+            this.tmsDeleteBill.Text = "حذف الفاتورة";
             // 
             // tbFilter
             // 
@@ -167,39 +193,13 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::inventory_managment.Properties.Resources.TestType_512;
+            this.pictureBox1.Image = global::inventory_managment.Properties.Resources.paymentlist512;
             this.pictureBox1.Location = new System.Drawing.Point(500, 40);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(262, 229);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 25;
             this.pictureBox1.TabStop = false;
-            // 
-            // tmsShowBillInfo
-            // 
-            this.tmsShowBillInfo.Image = global::inventory_managment.Properties.Resources.PersonDetails_32;
-            this.tmsShowBillInfo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.tmsShowBillInfo.Name = "tmsShowBillInfo";
-            this.tmsShowBillInfo.Size = new System.Drawing.Size(244, 38);
-            this.tmsShowBillInfo.Text = "عرض معلومات الفاتورة";
-            this.tmsShowBillInfo.Click += new System.EventHandler(this.tmsShowBillInfo_Click);
-            // 
-            // tmsEditBill
-            // 
-            this.tmsEditBill.Image = global::inventory_managment.Properties.Resources.edit_32;
-            this.tmsEditBill.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.tmsEditBill.Name = "tmsEditBill";
-            this.tmsEditBill.Size = new System.Drawing.Size(244, 38);
-            this.tmsEditBill.Text = "تعديل معلومات الفاتورة";
-            // 
-            // tmsDeleteBill
-            // 
-            this.tmsDeleteBill.Image = global::inventory_managment.Properties.Resources.Delete_32;
-            this.tmsDeleteBill.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.tmsDeleteBill.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.tmsDeleteBill.Name = "tmsDeleteBill";
-            this.tmsDeleteBill.Size = new System.Drawing.Size(244, 38);
-            this.tmsDeleteBill.Text = "حذف الفاتورة";
             // 
             // frmListBills
             // 

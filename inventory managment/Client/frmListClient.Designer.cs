@@ -194,6 +194,9 @@
             // 
             // tmsShowBills
             // 
+            this.tmsShowBills.Image = global::inventory_managment.Properties.Resources.billList32;
+            this.tmsShowBills.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.tmsShowBills.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tmsShowBills.Name = "tmsShowBills";
             this.tmsShowBills.Size = new System.Drawing.Size(239, 38);
             this.tmsShowBills.Text = "عرض الفواتير";
@@ -206,6 +209,9 @@
             // 
             // tmsAddPayment
             // 
+            this.tmsAddPayment.Image = global::inventory_managment.Properties.Resources.Payment32;
+            this.tmsAddPayment.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.tmsAddPayment.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tmsAddPayment.Name = "tmsAddPayment";
             this.tmsAddPayment.Size = new System.Drawing.Size(239, 38);
             this.tmsAddPayment.Text = "اضافة ايصال";
@@ -213,6 +219,9 @@
             // 
             // tmsShowPaymentList
             // 
+            this.tmsShowPaymentList.Image = global::inventory_managment.Properties.Resources.paymentlist32;
+            this.tmsShowPaymentList.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.tmsShowPaymentList.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tmsShowPaymentList.Name = "tmsShowPaymentList";
             this.tmsShowPaymentList.Size = new System.Drawing.Size(239, 38);
             this.tmsShowPaymentList.Text = "عرض قائمة الايصالات";

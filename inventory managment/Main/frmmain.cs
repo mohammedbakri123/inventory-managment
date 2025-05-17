@@ -86,5 +86,27 @@ namespace inventory_managment
             frmRepots frm = new frmRepots();
             frm.ShowDialog();
         }
+
+        private void msiStocks_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tmsCurrentUser_Click(object sender, EventArgs e)
+        {
+            frmShowUserinfo frm = new frmShowUserinfo(clsGlobal.crruntUser.UserID);
+            frm.ShowDialog();
+        }
+
+        private void tmsUpdateCurrentUser_Click(object sender, EventArgs e)
+        {
+            frmAddUpdateUser frm = new frmAddUpdateUser(clsGlobal.crruntUser.UserID);
+            frm.ShowDialog();
+        }
+
+        private void tmsLogOut_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

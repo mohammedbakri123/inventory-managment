@@ -70,6 +70,7 @@
             resources.ApplyResources(this.tbFilter, "tbFilter");
             this.tbFilter.Name = "tbFilter";
             this.tbFilter.TextChanged += new System.EventHandler(this.tbFilter_TextChanged);
+            this.tbFilter.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbFilter_KeyDown);
             // 
             // dgvCurrentSolds
             // 
@@ -301,6 +302,7 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmSellPoint_FormClosing);
             this.Load += new System.EventHandler(this.frmSellPoint_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmSellPoint_KeyDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.frmSellPoint_MouseMove);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCurrentSolds)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
